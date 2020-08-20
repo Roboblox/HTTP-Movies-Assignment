@@ -1,19 +1,19 @@
-import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 function SavedList({ list }) {
   return (
     <div className="saved-list">
       <h3>Saved Movies:</h3>
-      {list.map(movie => {
+      {list.map((movie) => {
         return (
-          <NavLink
+          <Link
             to={`/movies/${movie.id}`}
             key={movie.id}
             activeClassName="saved-active"
           >
             <span className="saved-movie">{movie.title}</span>
-          </NavLink>
+          </Link>
         );
       })}
       <div className="home-button">
